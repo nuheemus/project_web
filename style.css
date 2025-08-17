@@ -1,0 +1,153 @@
+/* Custom CSS variables */
+:root {
+    --primary: #3b82f6;
+    --secondary: #8b5cf6;
+    --dark: #0f172a;
+    --darker: #020617;
+}
+
+
+body {
+    background-color: rgb(11, 11, 11);  /* Sets background to black */
+    color: white;            /* Sets default text color to white */
+  }
+  
+  /* If you want specific text darker (for contrast) */
+  .body-text {
+    color: rgb(220, 220, 220);
+     } /* Light gray for better readability */
+
+   /* Reset some default styles */
+
+   /* For active state */
+.nav-link.active {
+    color: #3b82f6; /* primary color - change to your preferred active color */
+    font-weight: 600;
+    position: relative;
+}
+
+/* Optional: Add underline for active link */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3b82f6; /* same as text color */
+}
+
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: rgb(245, 240, 240);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.5);
+}
+
+.social-icon {
+    color: #e4e7eb; /* Your primary color */
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.9; /* Slight transparency change */
+    /* Color remains the same */
+  }
+
+/* Skill bars */
+.skill-bar {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 4px;
+}
+
+/* Cards */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Project cards */
+.project-card {
+    background: #1e293b;
+    transition: all 0.3s ease;
+}
+
+/* Contact form inputs */
+.contact-input {
+    background: #1e293b;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+
+
+/* Floating animation */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Timeline */
+.timeline-item:nth-child(odd) .order-1 {
+    order: 1;
+}
+
+.timeline-item:nth-child(even) .order-1 {
+    order: 2;
+}
+
+/* Mobile menu */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+/* Back to top button */
+#back-to-top {
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-item:nth-child(odd) .order-1,
+    .timeline-item:nth-child(even) .order-1 {
+        order: 1;
+        width: 100%;
+    }
+}
