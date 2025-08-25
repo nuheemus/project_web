@@ -8,7 +8,7 @@
 
 
 body {
-    background-color: rgb(11, 11, 11);  /* Sets background to black */
+    background-color: rgb(11, 11, 11) !important;  /* Sets background to black */
     color: white;            /* Sets default text color to white */
   }
   
